@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    .container {
+      margin: 50px auto;
+      border: 1px solid black;
+      border-radius: 24px;
+      height: 500px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    .container h1,
+    p,
+    button {
+      text-align: center;
+    }
+    .container h1 {
+      margin-top: 10px;
+      font-size: 30px;
+      font-weight: 600;
+    }
+    .container p {
+      margin-top: 10px;
+      font-weight: 400;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>MY PERSONAL PROFILE</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
+        veritatis!
+      </p>
+      <div class="max-w-md mx-auto mt-20 border border-2 h-[300px] w-full">
+        <h1 class="py-2 font-bold text-xl">Article Heading</h1>
+        <p class="leading-relaxed">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non
+          ipsum vel nunc commodo hendrerit sit amet vel nisi. Donec sodales
+          maximus justo, nec dictum lectus malesuada non. Sed auctor ultrices
+          tellus non varius.
+          <span class="hidden" id="more-text">
+            Sed eu enim malesuada, fermentum mi eu, finibus velit. Nam quis
+            blandit velit, vel vehicula neque. Etiam eu lorem suscipit,
+            sollicitudin ante at, pharetra quam.
+          </span>
+        </p>
+        <button id="toggle-btn" class="mt-4 px-44 text-blue-500">
+          Read More
+        </button>
+        <button id="hide-btn" class="hidden mt-4 px-44 text-blue-500">
+          Read Less
+        </button>
+      </div>
+    </div>
+  </body>
+  <script>
+    const moreTextEl = document.getElementById("more-text");
+    const toggleBtnEl = document.getElementById("toggle-btn");
+    const hideBtnEl = document.getElementById("hide-btn");
+
+    toggleBtnEl.addEventListener("click", () => {
+      moreTextEl.classList.toggle("hidden");
+      toggleBtnEl.classList.toggle("hidden");
+      hideBtnEl.classList.toggle("hidden");
+    });
+
+    hideBtnEl.addEventListener("click", () => {
+      moreTextEl.classList.toggle("hidden");
+      toggleBtnEl.classList.toggle("hidden");
+      hideBtnEl.classList.toggle("hidden");
+    });
+  </script>
+</html>
